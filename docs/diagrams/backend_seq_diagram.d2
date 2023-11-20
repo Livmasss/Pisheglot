@@ -1,0 +1,5 @@
+shape: sequence_diagram
+Frontend -> FastAPI: запрос
+FastAPI -> SQLAlchemy: SQLModel объект
+SQLAlchemy -> PostgreSQL: создание запроса, отправка
+PostgreSQL -> SQLAlchemy -> FastAPI -> Frontend: ответ, отправка данных из БД
